@@ -15,6 +15,6 @@ jobs:
       uses: SamKirkland/FTP-Deploy-Action@v4.3.4
       with:
         server: ftp.vigo-app.com
-        server-dir: ./
+        server-dir: /public_html/
         username: ${{ secrets.ftp_username }}
         password: ${{ secrets.ftp_password }}
