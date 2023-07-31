@@ -1,0 +1,4 @@
+base de datos
+user: vigoadm_u01
+bd: vigoadm_vigobd
+pass: 3kxM*qt2ZimW
