@@ -104,7 +104,7 @@
                                         required>
                                     <input type="hidden" class="form-control" id="driver_id" name="driver_id" placeholder=""   value="{{ $driver->id }}"
                                         required>
-                                    <input type="hidden" value="{{ $driver->vehicles[0]->id }}" name="id">
+                                    <input type="hidden" value="{{ $driver->vehicles[0]->id ?? "" }}" name="id">
                                 </div>
                                 <div class="col my-2">
                                     <label for="">Modelo</label>
