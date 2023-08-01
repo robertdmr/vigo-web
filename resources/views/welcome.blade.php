@@ -232,11 +232,15 @@
 
         function previewImage($campo,$imagen){
             var file = document.getElementById($campo).files[0];
-            var reader = new FileReader();
-            reader.onload = (e) => {
-                $("#"+$imagen).attr('src', e.target.result);
+            // get file extension
+            var extension = file.name.split('.').pop().toLowerCase();
+            if(extension!="pdf"){
+                var reader = new FileReader();
+                reader.onload = (e) => {
+                    $("#"+$imagen).attr('src', e.target.result);
+                }
+                reader.readAsDataURL(file);
             }
-            reader.readAsDataURL(file);
         }
 
         $("#documento_nro").on('change', function() {
