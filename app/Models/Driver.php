@@ -12,7 +12,11 @@ class Driver extends Model
 
     protected $guarded = ['id'];
 
-    public function image() : HasMany {
+    public function images() : HasMany {
         return $this->hasMany(Image::class);
+    }
+
+    public function vehicles() : HasMany {
+        return $this->hasMany(Vehicle::class);
     }
 }

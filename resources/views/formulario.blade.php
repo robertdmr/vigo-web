@@ -68,7 +68,7 @@
                         </div>
                         <div class="col col-md-6 mt-2">
                             <label for="">N° documento</label>
-                            <input type="text" class="form-control" id="document_nro" name="document_nro"
+                            <input type="text" class="form-control" id="document_number" name="document_number"
                                 placeholder="12345678">
                         </div>
                     </div>
