@@ -16,7 +16,7 @@
         </div>
 
         <h2>Panel</h2>
-        <div class="table-responsive">
+        <div class="table-responsive mb-3">
             <table class="table" id="listado">
                 <thead>
                     <tr>
