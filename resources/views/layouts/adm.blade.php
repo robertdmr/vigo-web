@@ -67,6 +67,7 @@
     </style>
 
     <link href="{{ asset('css/admin/dashboard.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="//cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
     @yield('styles')
 </head>
 
@@ -102,6 +103,7 @@
         integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE" crossorigin="anonymous">
     </script>
     <script src="{{ asset('css/admin/dashboard.js') }}"></script>
+    <script src="//cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
     @yield('scripts')
 </body>
 

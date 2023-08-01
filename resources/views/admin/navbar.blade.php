@@ -9,9 +9,15 @@
         </h6>
         <ul class="nav flex-column">
             <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">
+                <a class="nav-link active" aria-current="page" href="{{ route('admin.panel') }}">
                     <span data-feather="home" class="align-text-bottom"></span>
                     Dashboard
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">
+                    <span data-feather="home" class="align-text-bottom"></span>
+                    Usuarios
                 </a>
             </li>
 
@@ -28,7 +34,7 @@
             <li class="nav-item">
                 <a class="nav-link" href="#">
                     <span data-feather="file-text" class="align-text-bottom"></span>
-                    Usuarios
+                    Registros
                 </a>
             </li>
 
