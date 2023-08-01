@@ -19,7 +19,7 @@
     <div class="row">
         @foreach ($driver->images as $image)
             <div class="col-md-4">
-                <img src="{{ url('storage') ."/app/foto/". $image->path }}" alt="" class="img-fluid img-thumbnail">
+                <img src="{{ asset('storage/app/foto') ."/". $image->path }}" alt="" class="img-fluid img-thumbnail">
             </div>
         @endforeach
     </div>
