@@ -32,7 +32,7 @@
                         <tr>
                             <td>{{ $driver->document_number }}</td>
                             <td>{{ $driver->name }}</td>
-                            <td>{{ $driver->vehicles[0]->license_plate ?? '0' }}</td>
+                            <td>{{ $driver->vehicles[0]->license_plate ?? 'SIN DATOS' }}</td>
                             <td>{{ $driver->images->count() }}</td>
                             <td><a href="{{ route('admin.driver', $driver->id) }}">Ver</a></td>
                         </tr>
