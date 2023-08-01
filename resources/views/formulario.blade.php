@@ -74,7 +74,7 @@
                     </div>
                 </div>
                 <div class="d-grid gap-2 mt-3">
-                    <button class="btn btn-secondary" type="submit" id="btnRegister">Registrarme!</button>
+                    <button class="btn btn-secondary" type="submit" id="btnRegister">Siguiente</button>
                     <button class="btn btn-outline-warning" data-bs-dismiss="modal">más tarde</button>
                 </div>
             </div>

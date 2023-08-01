@@ -15,7 +15,7 @@
             </div>
         </div>
 
-        <h2>Panel</h2>
+        <h2>Listado de conductores</h2>
         <div class="table-responsive mb-3">
             <table class="table" id="listado">
                 <thead>
