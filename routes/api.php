@@ -22,7 +22,13 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::post('/drivers', [DriverController::class, 'store']);
+Route::put('/drivers/{id}', [DriverController::class, 'update']);
+
+Route::put('/vehicles/{id}', [VehicleController::class, 'update']);
+
 Route::post('/upload-foto',[ImageController::class, 'uploadFoto']);
+Route::post('/update-image',[ImageController::class, 'updateImage']);
+Route::delete('/delete-image/{id}',[ImageController::class, 'deleteImage']);
 Route::post('/driver-vehicle',[VehicleController::class, 'store']);
 
 Route::post('/control',[DriverController::class, 'control']);

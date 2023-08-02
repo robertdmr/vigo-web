@@ -32,6 +32,33 @@ class DriverController extends Controller
         return response()->json(['msg'=>'ok','driver_id'=>$driver->id], 200);
     }
 
+    public function update(Request $request, $id)
+    {
+        $driver = Driver::find($id);
+        if(!$driver){
+            return response()->json(['msg'=>'error','errors'=>'El conductor no existe'], 400);
+        }
+        $validate = Validator::make($request->all(),[
+            'name' => 'required',
+            'email' => 'required|email|unique:drivers,email,'.$id,
+            'phone' => 'required|unique:drivers,phone,'.$id,
+            'document_number'=>'unique:drivers,document_number,'.$id
+        ],[
+            'name.required' => 'El nombre es requerido',
+            'email.required' => 'El correo es requerido',
+            'email.email' => 'El correo no es válido',
+            'email.unique' => 'El correo ya existe',
+            'phone.required' => 'El telefono es requerido',
+            'phone.unique' => 'El telefono ya existe',
+            'document_number.unique' => 'El documento ya existe'
+        ]);
+        if($validate->fails()){
+            return response()->json(['msg'=>'Error en los datos','errors'=>$validate->errors()], 400);
+        }
+        $driver->update($request->all());
+        return response()->json(['msg'=>'ok'], 200);
+    }
+
 
     public function control(Request $request){
         $busqueda = $request->dato;
