@@ -100,7 +100,6 @@
                     <div class="card-content">
                         <div class="card-body">
                             <form action="{{ 'api/vehicle' }}" id="frmVehiculo" method="post">
-                                @csrf
                                 @method('PUT')
                                 <div class="row flex-column">
                                     <div id="msg2"></div>
@@ -112,7 +111,7 @@
                                         <input type="hidden" class="form-control" id="driver_id" name="driver_id"
                                             placeholder="" value="{{ $driver->id }}" required>
                                         <input type="hidden" value="{{ $driver->vehicles[0]->id ?? '' }}"
-                                            name="id">
+                                            name="id" id="vehicle_id">
                                     </div>
                                     <div class="col my-2">
                                         <label for="">Modelo</label>
@@ -246,6 +245,7 @@
                 data: $(this).serialize(),
                 success: function(res) {
                     console.log(res);
+                    $("#vehicle_id").val(res.id);
                     if (res.msg == "ok") {
                         $("#msg2").html(`
                         <div class="alert alert-success" role="alert">Actualizado correctamente</div>

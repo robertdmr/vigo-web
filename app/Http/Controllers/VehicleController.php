@@ -38,12 +38,9 @@ class VehicleController extends Controller
 
     public function update(Request $request, $id){
 
-        $vehicle = Vehicle::find($id);
-        if(!$vehicle){
-            return response()->json(['msg'=>'error','errors'=>'El vehículo no existe'], 400);
-        }
+        // return $id;
         $validate = Validator::make($request->all(),[
-            'license_plate'=>'required|unique:vehicles,license_plate,'.$id,
+            'license_plate'=>'required',
             'model' => 'required',
             'color' => 'required',
             'brand' => 'required',
@@ -64,7 +61,9 @@ class VehicleController extends Controller
         if($validate->fails()){
             return response()->json(['msg'=>'Error en los datos','errors'=>$validate->errors()], 400);
         }
-        $vehicle->update($request->all());
-        return response()->json(['msg'=>'ok'], 200);
+        $vehicle = Vehicle::updateOrCreate([
+            'id'=>$request->id
+        ],$request->all());
+        return response()->json(['msg'=>'ok', 'id'=>$vehicle->id], 200);
     }
 }
