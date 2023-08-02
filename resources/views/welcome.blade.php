@@ -94,11 +94,21 @@
         <main class="px-3">
             <h1>Viaja seguro e inteligente...</h1>
             <p class="lead">¡ViGO App, la aplicación segura e inteligente que revolucionará tu vida!</p>
-            <p class="lead">
-                <button type="button" class="btn btn-lg btn-secondary fw-bold border-white bg-white"
-                    data-bs-toggle="modal" data-bs-target="#frmRegistro" id="btnDescubre">Registrate <br>como
-                    conductor</button>
-            </p>
+            <p>Bajá la aplicación y registrate:</p>
+            <div class="d-flex flex-row">
+                <div class="col-6 col-md-6 text-center">
+                    <h3>Conductor</h3>
+                    <a href="https://play.google.com/store/apps/details?id=vigo.paraguay.taxi.conductor">
+                     <img src="{{ asset('images/logo_google_play.webp') }}" alt="Google Play" style="max-width: 120px" class="img-thumbnail">
+                    </a>
+                </div>
+                <div class="col-6 col-md-6 text-center">
+                    <h3>Usuario</h3>
+                    <a href="https://play.google.com/store/apps/details?id=vigo.paraguay.taxi.pasajero">
+                     <img src="{{ asset('images/logo_google_play.webp') }}" alt="Google Play" style="max-width: 120px" class="img-thumbnail">
+                    </a>
+                </div>
+            </div>
         </main>
 
         <footer class="mt-auto text-dark">
